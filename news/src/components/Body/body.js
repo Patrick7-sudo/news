@@ -3,6 +3,7 @@ import {data} from "../../data.js"
 import {useState,useEffect} from "react";
 import Favbuttons from "./favButtons/favButtons";
 import NewsItem from "./NewsItem/index.js";
+import logoImg from "../header/Lightmode Logo.svg"
 
 function Body({ modeSwitch, lightMode,dataNews }) {
   const [dataVar, setDataVar] = useState(data);
@@ -21,12 +22,20 @@ function Body({ modeSwitch, lightMode,dataNews }) {
   }, [dataVar,dataNews]);
 
    useEffect(() => {
-     setImg(dataVar[0].image_url);
+
+    if (dataVar[0].image_url === null) {
+      setImg(logoImg);
+    }else{
+      setImg(dataVar[0].image_url);
+    }
+     
      setDes(dataVar[0].title);
      setArticle(dataVar[0].description);
 
 
    }, [dataVar,dataNews]);
+
+
 
 
    useEffect(() => {
