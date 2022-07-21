@@ -1,0 +1,21 @@
+:root{
+ 
+    --h4-font: 21px;
+   
+}
+
+@media screen  and (max-width: 600px){
+    :root{
+        --h4-font: 18px
+    }
+}
+
+
+.backgroundColor{
+    background-color: transparent;
+    border: none;
+    margin-left:.5rem;
+    font-size: var(--h4-font);
+    cursor: pointer;
+    
+}

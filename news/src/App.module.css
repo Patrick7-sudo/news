@@ -1,0 +1,11 @@
+.headerContianer{
+    /* background-color: red; */
+    min-height: 20%;
+}
+.loadingPage{
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
